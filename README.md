@@ -1,25 +1,16 @@
-# ReduxSimpleStarter
+# CoinStarter
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+비트코인 마진비율, 마진거래 비율 통계 등의 정보를 제공하기 위한 개인 프로젝트
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
 #### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click [here](https://github.com/Gunju-Ko/CoinStarter) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
 > npm install
 > npm start
 ```
+
+### FrameWork
+* React
