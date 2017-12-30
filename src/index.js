@@ -1,26 +1,17 @@
-import React, {Component} from 'react';
-import ReactDom from 'react-dom';
-import LeftSideNavigation from './components/left-side-navigation';
-import NavigationBar from './components/navigation-bar';
-import Main from './components/main';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {applyMiddleware, createStore} from 'redux';
 
-// Create a new component, This component should produce some HTML
-class App extends Component {
+import {browserHistory, Router} from 'react-router';
 
-    render() {
-        return (
-            <div>
-                <NavigationBar/>
-                <div className="container-fluid text-center">
-                    <div className="row content">
-                        <LeftSideNavigation/>
-                        <Main/>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+import reducers from './reducers';
+import routers from './router';
 
-// Take this component's generated HTML and put it on the page (in the DOM)
-ReactDom.render(<App/>, document.querySelector('.container'));
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <Router history={browserHistory} routes={routers}/>
+  </Provider>
+  , document.querySelector('.container'));
