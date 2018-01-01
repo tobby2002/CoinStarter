@@ -7,7 +7,7 @@ class TicketList extends Component {
   
   render() {
     return (
-      <ul className="list-group-col-sm4">{this.renderList()}</ul>
+      <ul className="list-group col-sm-4">{this.renderList()}</ul>
     )
   }
   
@@ -17,11 +17,9 @@ class TicketList extends Component {
         <li onClick={() => this.props.selectTicket(ticket)}
             key={ticket.title}
             className="list-group-item">
-          <div>
-            {ticket.title} <br/>
-            {ticket.timestamp} <br/>
-            {ticket.last}
-          </div>
+          <div>{ticket.title}</div>
+          <div>{ticket.timestamp}</div>
+          <div>{ticket.last}</div>
         </li>
       )
     })
