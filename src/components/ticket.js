@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import TicketList from './ticket-list';
 
 export default class Ticket extends Component {
   render() {
@@ -7,6 +8,10 @@ export default class Ticket extends Component {
         <h2>
           현재 시세 확인
         </h2>
+  
+        <div>
+          <TicketList/>
+        </div>
       </div>
     );
   }
