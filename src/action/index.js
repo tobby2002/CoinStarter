@@ -1,31 +1,31 @@
 import axios from 'axios';
 
-export const SELECT_TICKET = 'SELECT_TICKET';
-export const FETCH_TICKET = 'FETCH_TICKET';
+export const SELECT_CURRENCY = 'SELECT_CURRENCY';
+export const FETCH_CURRENCIES = 'FETCH_CURRENCIES';
 
 const ROOT_URL = "http://localhost:8081";
 
 
-export function selectTicket(ticket) {
+export function selectCurrency(currency) {
   return {
-    type: SELECT_TICKET,
-    payload: ticket
+    type: SELECT_CURRENCY,
+    payload: currency
   };
 }
 
-export function fetchTickets() {
+export function fetchCurrencies() {
   return {
-    type: FETCH_TICKET,
+    type: FETCH_CURRENCIES,
     payload: Promise.all([
-      fetchTicket('BTC_KRW'),
-      fetchTicket('ETC_KRW'),
-      fetchTicket('ETH_KRW'),
-      fetchTicket('XRP_KRW'),
-      fetchTicket('BCH_KRW')
+      fetchCurrency('BTC_KRW'),
+      fetchCurrency('ETC_KRW'),
+      fetchCurrency('ETH_KRW'),
+      fetchCurrency('XRP_KRW'),
+      fetchCurrency('BCH_KRW')
     ])
   };
 }
 
-export function fetchTicket(ticker) {
+export function fetchCurrency(ticker) {
   return axios.get(`${ROOT_URL}/currencies/${ticker}/last`);
 }

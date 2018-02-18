@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import TicketList from './ticket-list';
-import TicketDetail from './ticket-detail';
+import CurrencyList from './currency-list';
+import CurrencyDetail from './currency-detail';
 
-export default class Ticket extends Component {
+export default class Ticker extends Component {
   render() {
     return (
       <div className="col-sm-10 text-left">
@@ -11,8 +11,8 @@ export default class Ticket extends Component {
         </h2>
   
         <div>
-          <TicketList/>
-          <TicketDetail/>
+          <CurrencyList/>
+          <CurrencyDetail/>
         </div>
       </div>
     );

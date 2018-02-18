@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
-import TicketReducer from './reducer_ticket';
-import ActiveTicket from './reducer_active_ticket';
+import CurrencyReducer from './reducer_currency';
+import ActiveCurrency from './reducer_active_currency';
 
 const rootReducer = combineReducers({
-  tickets: TicketReducer,
-  activeTicket: ActiveTicket
+  currencies: CurrencyReducer,
+  activeCurrency: ActiveCurrency
 });
 
 export default rootReducer;
